@@ -1,10 +1,22 @@
+import React from "react";
+import Nav from "./components/nav/nav";
+import Home from "./components/home/home";
 
 function App() {
   return (
-    <div>
-       <h1 className="bg-amber-500 text-5xl ">Hello world</h1>
-       <h2 className="text-3xl text-red-300">Hello world 2</h2>
-    </div>
+    <main className="flex flex-col min-h-screen ml-40 mr-40">
+      <Nav/>
+      <div className="flex flex-col ">
+        <section id="home" className="flex">
+          <Home/>
+        </section>
+        <section id="about" className="">
+   
+        </section>
+        <section id="portfolio"></section>
+        <section id="contact"></section>
+      </div>
+    </main>
   )
 }
 
