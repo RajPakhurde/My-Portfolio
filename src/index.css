@@ -7,16 +7,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: fit-content;
   background-color: #081C29;
 }
-.navbar {
-  height: 10vh;
+.main-section {
+  height: calc(100vh - 5rem);
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
 }
-section {
-  height: 100vh;
+
+.main-section::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.home {
+  height: 100%;
 }
 .home-div {
   width: 35%;
@@ -31,6 +40,8 @@ section {
   border-radius: 50%; 
   border: 2px solid #00EEFF;
 }
- 
+.home-info {
+  width: 50%;
+} 
  
 

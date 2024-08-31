@@ -8,13 +8,13 @@ import profilePic from '../home/profile_pic.jpg'
 
 const Home = () => {
     return (
-        <div className="flex justify-between mt-40">
-            <div className="home-div text-white flex flex-col gap-4">
+        <div className="flex justify-between mt-40 h-screen">
+            <div className="home-div text-white flex flex-col gap-4 home-info">
                 <h2 className="text-4xl font-bold">Hello, It's Me</h2>
                 <h1 className="text-6xl font-bold">Raj Pakhurde</h1>
                 <h2 className="text-4xl font-bold">And I'm a <span className="text-skyBlue">Software Developer</span></h2>
                 <br />
-                <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, in. Aut doloremque asperiores fuga. Dolores culpa alias illo perferendis, neque enim veniam dolorem aut iusto libero nesciunt at magni fuga.</p>
+                <p className="text-xl">Passionate Software Developer with a knack for creating innovative solutions and a commitment to delivering high-quality, user-centric applications.</p>
                 <br />
                 <div className="flex gap-8">
                     <a href="https://github.com/RajPakhurde" target="blank" className="icon text-skyBlue">
