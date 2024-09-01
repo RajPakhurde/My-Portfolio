@@ -13,12 +13,15 @@ html {
 body {
   height: fit-content;
   background-color: #081C29;
+  display: flex;
+  justify-content: center;
 }
 .main-section {
   height: calc(100vh - 5rem);
   overflow: auto;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scroll-behavior: smooth;
 }
 
 .main-section::-webkit-scrollbar {
@@ -27,9 +30,7 @@ body {
 .home {
   height: 100%;
 }
-.home-div {
-  width: 35%;
-}
+
 .icon {
   height: 3rem; 
   width: 3rem; 
@@ -41,7 +42,181 @@ body {
   border: 2px solid #00EEFF;
 }
 .home-info {
-  width: 50%;
-} 
- 
+  width: 50rem;
+  animation-name: home-info;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 
+} 
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    /* transform: translateX(-2000px) */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(0px); */
+  }
+}
+
+.animated-block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes projectBlocks {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.project-block {
+  animation: projectBlocks linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+ 
+.home-div {
+  width: 40%;
+
+}
+
+@keyframes hello-text {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.first-h2 {
+  animation-name: hello-text;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes sec-h2 {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.sec-h2 {
+  z-index: 10;
+  animation-name: sec-h2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: visible;
+}
+.container {
+  z-index: 10;
+  overflow: visible;
+  position: relative;
+  overflow: visible;
+}
+
+@keyframes home-info {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes img-info {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.img-info {
+  animation-name: img-info;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes download-btn {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+
+.download-btn:hover {
+  animation-name: download-btn;
+  animation-duration: .2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes about-me-sec {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes about-me-text {
+  from {
+    transform: translateZ(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+.about-me-text{
+  animation-name: about-me-text;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.about-me-sec {
+  width: 55%;
+  animation-name: about-me-sec;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .square {
+    animation-name: about-me-sec;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}

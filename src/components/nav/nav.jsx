@@ -6,7 +6,7 @@ const Nav = () => {
     color: "#00EEFF",
   };
   return (
-    <div className="navbar h-full flex justify-between items-center">
+    <div className="navbar h-full flex justify-between items-center pl-20 pr-20">
       <h1 className="text-3xl font-bold text-white">RAJ.</h1>
       <nav className="flex gap-12 text-grey">
         <a
