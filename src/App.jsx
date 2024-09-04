@@ -11,15 +11,16 @@ import laptopImg from './laptop-img.jpg'
 import htmlLogo from './assets/html-5.png'
 import cssLogo from './assets/css-3.png'
 import bootstrapLogo from './assets/bootstrap.png'
-import expressLogo  from './assets/express-js.png'
+import expressLogo from './assets/express-js.png'
 import jsLogo from './assets/js.png'
 import nodejsLogo from './assets/nodejs.png'
 import reactLogo from './assets/physics.png'
 import postgresLogo from './assets/postgre.png'
 import sqlLogo from './assets/sql-server.png'
 import tailwindLogo from './assets/tailwind.png'
- 
+
 import Chip from '@mui/material/Chip';
+import Portfolio from "./components/portfolio/portfolio";
 
 function App() {
   const [animation, setAnimation] = useState(false);
@@ -37,15 +38,18 @@ function App() {
     setAnimation(false)
   }, [animation])
 
+ console.log(window.innerWidth);
+ 
+ 
   return (
 
     <main className=" sm:bg-blue-300 md:bg-green-200 lg:bg-gray-300">
       {/* Nav bar */}
       <div className="flex justify-between items-center bg-red-200 p-4 h-[60px] lg:h-[80px] sticky top-0">
-        <h1 className="text-3xl font-bold ">R@J.dev</h1>
+        <h1 className="text-2xl font-bold">R@J.dev</h1>
         <nav
-          style={hideNav}
-          className="flex gap-12 text-grey">
+          // style={hideNav}
+          className={`flex gap-12 font-semibold ${window.innerWidth <= 600 ? 'hidden' : null}`}>
           <a
             style={activeNav === "home" ? hoverColor : null}
             href="#home"
@@ -87,9 +91,9 @@ function App() {
       </div>
 
       {/* Main content */}
-      <div className=" flex flex-col justify-center items-center h-[100%]"  >
+      <div className=" flex flex-col justify-center items-center h-[100%] "  >
         <section id="home" className="flex lg:w-[70%] h-[calc(100vh-60px)] lg:h-[calc(100vh-80px)] ">
-          <div className="flex flex-wrap-reverse lg:flex-nowrap items-center justify-between bg-green-200 p-4 gap-4 ">
+          <div className="flex flex-wrap-reverse lg:flex-nowrap items-center justify-between bg-white p-4 gap-4 ">
 
             <div className="lg:w-[50%] flex flex-col gap-1">
               <h2 className="font-bold text-2xl md:text-3xl">Hello, It's Me 👋</h2>
@@ -97,7 +101,7 @@ function App() {
               <h1 className="font-bold text-4xl md:text-5xl">Raj Pakhurde</h1>
               <h2 className="font-bold text-2xl md:text-3xl">And I'm a <span className="text-skyBlue">Software Developer</span></h2>
               <br />
-              <p className="font-semibold text-xl">Passionate Software Developer with a knack for creating innovative solutions and a commitment to delivering high-quality, user-centric applications.</p>
+              <p className="font-semibold ">Passionate Software Developer with a knack for creating innovative solutions and a commitment to delivering high-quality, user-centric applications.</p>
               <br />
               <div className="flex gap-4">
                 <a href="https://github.com/RajPakhurde" target="blank" className="icon text-skyBlue ">
@@ -121,8 +125,8 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="flex lg:w-[70%] h-fit lg:h-[calc(100vh-80px)]">
-          <div className="flex flex-wrap w-full lg:flex-nowrap items-center justify-between bg-blue-200 p-4 gap-4 ">
+        <section id="about" className="flex lg:w-[70%] h-fit lg:h-[calc(100vh-80px)] ">
+          <div className="flex flex-wrap w-full lg:flex-nowrap items-center justify-between bg-white p-4 gap-4 ">
 
 
             <div className="w-full flex justify-center lg:w-[30%] ">
@@ -131,9 +135,9 @@ function App() {
 
             <div className="lg:w-[60%]">
               <h1 className="font-bold text-4xl md:text-5xl">About <span className="text-skyBlue">Me</span></h1>
-              <h2 className="font-bold text-2xl md:text-3xl">Software Developer!</h2>
+              <h2 className="font-bold text-2xl md:text-3xl ">Software Developer!</h2>
               <br />
-              <p className="font-semibold text-xl">I am a final-year BE Computer Engineering student with a passion for building impactful software solutions. As a full-stack developer, I have hands-on experience with a diverse set of technologies, including React, Node.js, SQLite, Electron.js, PostgreSQL, HTML, CSS, and more.
+              <p className="font-semibold text-grey">I am a final-year BE Computer Engineering student with a passion for building impactful software solutions. As a full-stack developer, I have hands-on experience with a diverse set of technologies, including React, Node.js, SQLite, Electron.js, PostgreSQL, HTML, CSS, and more.
                 <br />
                 <br />
 
@@ -162,8 +166,15 @@ function App() {
           </div>
         </section>
 
-        <section id="portfolio">
-          {/* <Portfolio/> */}
+        <section id="portfolio" className="flex lg:w-[70%] min-h-[calc(100vh-60px)] lg:min-h-[calc(100vh-80px)]  pt-20">
+          <div className="flex flex-col w-full bg-white p-4 gap-4 ">
+            <h1 className="font-bold text-[15px] md:text-xl text-skyBlue ">PORTFOLIO</h1>
+            <h2 className="font-bold text-xl md:text-2xl">Each project is a unique piece of development 🧩</h2>
+
+            <div className="w-[100%] flex justify-center mt-10">
+               <Portfolio/>
+            </div>
+          </div>
         </section>
         <section id="contact"></section>
       </div>
