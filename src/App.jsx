@@ -118,7 +118,7 @@ function App() {
             <div className="lg:w-[50%] flex flex-col gap-1">
               <h2 className="font-bold text-2xl md:text-3xl">Hello, It's Me 👋</h2>
 
-              <h1 className="font-bold text-4xl md:text-5xl">Raj Pakhurde</h1>
+              <h1 className="font-extrabold text-4xl md:text-5xl">Raj Pakhurde</h1>
               <h2 className="font-bold text-2xl md:text-3xl">And I'm a <span className="text-skyBlue">Software Developer</span></h2>
               <br />
               <p className="font-semibold ">Passionate Software Developer with a knack for creating innovative solutions and a commitment to delivering high-quality, user-centric applications.</p>
