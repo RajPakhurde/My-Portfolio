@@ -9,7 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Zoom from '@mui/material/Zoom';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import pdf from './Raj-Pakhurde-Resume-final.pdf'
-import profilePic from './profile_pic.jpg'
+import profilePic from './profile_pic.png'
 import laptopImg from './laptop-img.jpg'
 
 import htmlLogo from './assets/html-5.png'
@@ -139,7 +139,7 @@ function App() {
             <Zoom in={true}>
               <div className="w-full flex justify-center lg:w-[40%]">
 
-                <img src={profilePic} alt="profile image" className="h-60 md:h-60 lg:h-80 rounded-full " />
+                <img src={profilePic} alt="profile image" className="h-60 md:h-60 lg:h-80" />
               </div>
             </Zoom>
           </div>
